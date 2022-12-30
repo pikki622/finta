@@ -39,7 +39,7 @@ def trending_up(df: pd.Series, period: int) -> pd.Series:
     :return: result Series
     """
 
-    return pd.Series(df.diff(period) > 0, name="trending_up {}".format(period))
+    return pd.Series(df.diff(period) > 0, name=f"trending_up {period}")
 
 
 def trending_down(df: pd.Series, period: int) -> pd.Series:
@@ -49,4 +49,4 @@ def trending_down(df: pd.Series, period: int) -> pd.Series:
     :return: result Series
     """
 
-    return pd.Series(df.diff(period) < 0, name="trending_down {}".format(period))
+    return pd.Series(df.diff(period) < 0, name=f"trending_down {period}")
